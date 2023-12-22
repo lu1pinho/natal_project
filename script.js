@@ -1,5 +1,5 @@
 const names = ['Luis', 'Paula', 'Andrea', 'Elisa', 'Paulo', 'Iara', 'Marlene', 'Erick', 'Wallison'];
-const videos = ['video.mp4', 'video2.mp4'];
+const videos = ['video.mp4', 'video2.mp4', 'video3.mp4', 'video4.mp4'];
 
 // Pré-gerar as atribuições e senhas
 const passwordMap = {

@@ -1,5 +1,5 @@
 const names = ['Luis', 'Paula', 'Andrea', 'Elisa', 'Paulo', 'Iara', 'Marlene', 'Erick', 'Wallison'];
-const video = 'video.mp4';
+const videos = ['video.mp4', 'video2.mp4'];
 
 // Pré-gerar as atribuições e senhas
 const passwordMap = {
@@ -32,7 +32,11 @@ function revealSecretFriend() {
   if (index !== -1) {
     const assignedName = passwordMap[names[index]].assignedName;
     resultDiv.innerText = `Você tirou: ${assignedName}`;
+
+    // Escolhe um vídeo aleatório
+    const video = videos[Math.floor(Math.random() * videos.length)];
     imageDiv.innerHTML = `<video autoplay loop playsinline><source src="${video}" type="video/mp4"></video>`;
+
     alertDiv.innerText = '';  // Limpa a mensagem de alerta
   } else {
     alertDiv.innerText = 'Senha inválida.';  // Exibe a mensagem de alerta no novo div

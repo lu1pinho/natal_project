@@ -3,15 +3,15 @@ const video = 'video.mp4';
 
 // Pré-gerar as atribuições e senhas
 const passwordMap = {
-  'Luis': { assignedName: 'Iara', password: 'mno345' },
-  'Paula': { assignedName: 'Elisa', password: 'jkl012' },
-  'Andrea': { assignedName: 'Paulo', password: 'def456' },
-  'Elisa': { assignedName: 'Marlene', password: 'pqr678' },
-  'Paulo': { assignedName: 'Erick', password: 'stu901' },
-  'Iara': { assignedName: 'Wallison', password: 'vwx234' },
-  'Marlene': { assignedName: 'Andrea', password: 'yz567' },
-  'Erick': { assignedName: 'Luis', password: 'abc123' },
-  'Wallison': { assignedName: 'Paula', password: 'ghi789' }
+  'Luis': { assignedName: 'Paula', password: 'abc123' },
+  'Paula': { assignedName: 'Andrea', password: 'def456' },
+  'Andrea': { assignedName: 'Elisa', password: 'ghi789' },
+  'Elisa': { assignedName: 'Paulo', password: 'jkl012' },
+  'Paulo': { assignedName: 'Iara', password: 'mno345' },
+  'Iara': { assignedName: 'Marlene', password: 'pqr678' },
+  'Marlene': { assignedName: 'Erick', password: 'stu901' },
+  'Erick': { assignedName: 'Wallison', password: 'vwx234' },
+  'Wallison': { assignedName: 'Luis', password: 'yz567' }
 };
 
 function revealSecretFriend() {

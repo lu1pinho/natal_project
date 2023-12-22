@@ -1,5 +1,5 @@
 const names = ['Luis', 'Paula', 'Andrea', 'Elisa', 'Paulo', 'Iara', 'Marlene', 'Erick', 'Wallison'];
-const video = './imagens/video.mp4';
+const video = './video.mp4';
 const passwordMap = generateRandomAssignments(names);
 
 function revealSecretFriend() {

@@ -73,15 +73,14 @@ body {
   align-items: center;
 }
 
-#image img {
+#image video {
   max-width: 100%;
   height: auto;
 }
 
-
 @media only screen and (max-width: 600px) {
-  #image img {
-    width: 200px;
+  #image video {
+    width: 100%;
     height: auto;
   }
-} 
+}

@@ -15,18 +15,17 @@ body {
   background-color: #fff;
   padding: 20px;
   border-radius: 8px;
-  box-shadow: 0px 0px 10px rgba(0,0,0,0.1);
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
   width: 80%;
   max-width: 600px;
-  
 }
 
-.card, .exibir {
-  width: 90%;
+.card,
+.exibir {
+  width: 100%; /* Alterado para ocupar 100% da largura */
   padding: 20px;
   border-radius: 8px;
-  /* box-shadow: 0px 0px 10px rgba(0,0,0,0.05); */
-  margin-bottom: 5px;
+  margin-bottom: 15px; /* Aumentado o espaçamento inferior */
 }
 
 .card {
@@ -36,8 +35,9 @@ body {
   align-items: center;
 }
 
-.card input, .card button {
-  width: 90%;
+.card input,
+.card button {
+  width: 100%; /* Ocupa toda a largura do pai */
   padding: 10px;
   margin-top: 10px;
   border-radius: 4px;
@@ -49,6 +49,7 @@ body {
   color: white;
   cursor: pointer;
   max-width: 200px;
+  transition: background-color 0.3s; /* Adicionada uma transição suave */
 }
 
 .card button:hover {
@@ -76,4 +77,3 @@ body {
   max-width: 100%;
   height: auto;
 }
-

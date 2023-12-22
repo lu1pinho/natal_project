@@ -1,6 +1,18 @@
 const names = ['Luis', 'Paula', 'Andrea', 'Elisa', 'Paulo', 'Iara', 'Marlene', 'Erick', 'Wallison'];
-const video = './video.mp4';
-const passwordMap = generateRandomAssignments(names);
+const video = './imagens/video.mp4';
+
+// Pré-gerar as atribuições e senhas
+const passwordMap = {
+  'Luis': { assignedName: 'Elisa', password: 'abc123' },
+  'Paula': { assignedName: 'Paulo', password: 'def456' },
+  'Andrea': { assignedName: 'Iara', password: 'ghi789' },
+  'Elisa': { assignedName: 'Marlene', password: 'jkl012' },
+  'Paulo': { assignedName: 'Erick', password: 'mno345' },
+  'Iara': { assignedName: 'Wallison', password: 'pqr678' },
+  'Marlene': { assignedName: 'Luis', password: 'stu901' },
+  'Erick': { assignedName: 'Paula', password: 'vwx234' },
+  'Wallison': { assignedName: 'Andrea', password: 'yz567' }
+};
 
 function revealSecretFriend() {
   const passwordInput = document.getElementById('password');
@@ -26,7 +38,6 @@ function revealSecretFriend() {
     alertDiv.innerText = 'Senha inválida.';  // Exibe a mensagem de alerta no novo div
   }
 }
-
 function listAllPasswords() {
   console.log('Lista de Sorteio:');
   names.forEach((name) => {

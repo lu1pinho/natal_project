@@ -38,52 +38,6 @@ function revealSecretFriend() {
     alertDiv.innerText = 'Senha inválida.';  // Exibe a mensagem de alerta no novo div
   }
 }
-function listAllPasswords() {
-  console.log('Lista de Sorteio:');
-  names.forEach((name) => {
-    const assignedName = passwordMap[name].assignedName;
-    console.log(`${name} tirou ${assignedName}. Senha: ${passwordMap[name].password}`);
-  });
-}
-
-function generateRandomAssignments(names) {
-  const shuffledNames = shuffleArray([...names]);
-  const assignmentMap = {};
-
-  for (let i = 0; i < names.length; i++) {
-    let assignedName = shuffledNames[i % shuffledNames.length]; 
-
-    while (assignedName === names[i]) {
-      assignedName = shuffledNames[Math.floor(Math.random() * names.length)];
-    }
-
-    const password = generateRandomPassword();
-    assignmentMap[names[i]] = {
-      assignedName: assignedName,
-      password: password
-    };
-  }
-
-  return assignmentMap;
-}
-
-function generateRandomPassword() {
-  const characters = 'abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789';
-  let password = '';
-  for (let i = 0; i < 6; i++) {
-    const randomIndex = Math.floor(Math.random() * characters.length);
-    password += characters[randomIndex];
-  }
-  return password;
-}
-
-function shuffleArray(array) {
-  for (let i = array.length - 1; i > 0; i--) {
-    const j = Math.floor(Math.random() * (i + 1));
-    [array[i], array[j]] = [array[j], array[i]];
-  }
-  return array;
-}
 
 function checkDuplicateAssignments() {
   const assignmentsCount = {};
@@ -105,14 +59,5 @@ function checkDuplicateAssignments() {
   return duplicates;
 }
 
-function listNamesAndPasswords() {
-  console.log('Lista de Nomes e Senhas:');
-  names.forEach((name) => {
-    console.log(`Nome: ${name}, Senha: ${passwordMap[name].password}`);
-  });
-}
-
 window.revealSecretFriend = revealSecretFriend;
-window.listAllPasswords = listAllPasswords;
 window.checkDuplicateAssignments = checkDuplicateAssignments;
-window.listNamesAndPasswords = listNamesAndPasswords;

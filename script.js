@@ -3,15 +3,15 @@ const video = 'video.mp4';
 
 // Pré-gerar as atribuições e senhas
 const passwordMap = {
-  'Luis': { assignedName: 'Elisa', password: 'abc123' },
-  'Paula': { assignedName: 'Paulo', password: 'def456' },
-  'Andrea': { assignedName: 'Iara', password: 'ghi789' },
-  'Elisa': { assignedName: 'Marlene', password: 'jkl012' },
-  'Paulo': { assignedName: 'Erick', password: 'mno345' },
-  'Iara': { assignedName: 'Wallison', password: 'pqr678' },
-  'Marlene': { assignedName: 'Luis', password: 'stu901' },
-  'Erick': { assignedName: 'Paula', password: 'vwx234' },
-  'Wallison': { assignedName: 'Andrea', password: 'yz567' }
+  'Luis': { assignedName: 'Iara', password: 'mno345' },
+  'Paula': { assignedName: 'Elisa', password: 'jkl012' },
+  'Andrea': { assignedName: 'Paulo', password: 'def456' },
+  'Elisa': { assignedName: 'Marlene', password: 'pqr678' },
+  'Paulo': { assignedName: 'Erick', password: 'stu901' },
+  'Iara': { assignedName: 'Wallison', password: 'vwx234' },
+  'Marlene': { assignedName: 'Andrea', password: 'yz567' },
+  'Erick': { assignedName: 'Luis', password: 'abc123' },
+  'Wallison': { assignedName: 'Paula', password: 'ghi789' }
 };
 
 function revealSecretFriend() {
@@ -32,7 +32,7 @@ function revealSecretFriend() {
   if (index !== -1) {
     const assignedName = passwordMap[names[index]].assignedName;
     resultDiv.innerText = `Você tirou: ${assignedName}`;
-    imageDiv.innerHTML = `<video autoplay loop><source src="${video}" type="video/mp4"></video>`;
+    imageDiv.innerHTML = `<video autoplay loop playsinline><source src="${video}" type="video/mp4"></video>`;
     alertDiv.innerText = '';  // Limpa a mensagem de alerta
   } else {
     alertDiv.innerText = 'Senha inválida.';  // Exibe a mensagem de alerta no novo div
